@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationBar  setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],
-        NSFontAttributeName:[UIFont boldSystemFontOfSize:17]}];
+        NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     
     self.itemsArray = [NSMutableArray arrayWithObjects:@"我的账户", @"企业认证", @"公司资料", nil];
@@ -38,6 +38,17 @@
     
     [self.view addSubview:self.personTableView];
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden=false;
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+ self.tabBarController.tabBar.hidden=true;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

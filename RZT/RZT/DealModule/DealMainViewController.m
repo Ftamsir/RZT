@@ -34,7 +34,7 @@
 
 - (void)setupView {
     [self.navigationController.navigationBar  setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],
-                                                                       NSFontAttributeName:[UIFont boldSystemFontOfSize:17]}];
+        NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     self.view.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:242.0/255.0 alpha:1.0];
 }

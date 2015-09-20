@@ -18,12 +18,17 @@
 		730701B61BA9096000593FBC /* 导航条375x64@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 730701A71BA9096000593FBC /* 导航条375x64@3x.png */; };
 		730701BB1BA9096000593FBC /* logo-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 730701AC1BA9096000593FBC /* logo-1.jpg */; };
 		730701C91BA9510200593FBC /* mainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730701C81BA9510200593FBC /* mainTabBarViewController.m */; };
-		738FF6951B9E825500F5318E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 738FF6941B9E825500F5318E /* main.m */; };
-		738FF6981B9E825500F5318E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 738FF6971B9E825500F5318E /* AppDelegate.m */; };
-		738FF69E1B9E825500F5318E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738FF69C1B9E825500F5318E /* Main.storyboard */; };
-		738FF6A01B9E825500F5318E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738FF69F1B9E825500F5318E /* Images.xcassets */; };
-		738FF6A31B9E825500F5318E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738FF6A11B9E825500F5318E /* LaunchScreen.xib */; };
-		738FF6AF1B9E825500F5318E /* RZTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 738FF6AE1B9E825500F5318E /* RZTTests.m */; };
+		7355BA371BACDC58005DAD85 /* DBCameraImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA261BACDC58005DAD85 /* DBCameraImageView.m */; };
+		7355BA381BACDC58005DAD85 /* DBCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA291BACDC58005DAD85 /* DBCameraManager.m */; };
+		7355BA391BACDC58005DAD85 /* DBCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA2B1BACDC58005DAD85 /* DBCameraView.m */; };
+		7355BA3A1BACDC58005DAD85 /* DBCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA2D1BACDC58005DAD85 /* DBCameraViewController.m */; };
+		7355BA3B1BACDC58005DAD85 /* DBCamera.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7355BA2F1BACDC58005DAD85 /* DBCamera.strings */; };
+		7355BA3C1BACDC58005DAD85 /* DBCameraImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7355BA341BACDC58005DAD85 /* DBCameraImages.xcassets */; };
+		7355BA3D1BACDC58005DAD85 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA361BACDC58005DAD85 /* UIImage+Crop.m */; };
+		7355BA421BACF8EE005DAD85 /* ZYQAssetPicker.Bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7355BA3F1BACF8EE005DAD85 /* ZYQAssetPicker.Bundle */; };
+		7355BA431BACF8EE005DAD85 /* ZYQAssetPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA411BACF8EE005DAD85 /* ZYQAssetPickerController.m */; };
+		7355BA491BACFA35005DAD85 /* MessagePhotoMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA461BACFA35005DAD85 /* MessagePhotoMenuItem.m */; };
+		7355BA4A1BACFA35005DAD85 /* ShowBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355BA481BACFA35005DAD85 /* ShowBigViewController.m */; };
 		F4B6AC691BAAAED8008F1764 /* DeatailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6AC621BAAAED8008F1764 /* DeatailTableViewCell.m */; };
 		F4B6AC6A1BAAAED8008F1764 /* DeatailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B6AC631BAAAED8008F1764 /* DeatailTableViewCell.xib */; };
 		F4B6AC6B1BAAAED8008F1764 /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6AC651BAAAED8008F1764 /* PersonTableViewCell.m */; };
@@ -249,6 +254,7 @@
 			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+
 		738FF6861B9E825500F5318E = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +534,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				it,
 			);
 			mainGroup = 738FF6861B9E825500F5318E;
 			productRefGroup = 738FF6901B9E825500F5318E /* Products */;
@@ -545,10 +553,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73EEE7621BAC2C7F0026909B /* ButtonsTableViewCell.xib in Resources */,
 				738FF69E1B9E825500F5318E /* Main.storyboard in Resources */,
+				73EEE77A1BAC39260026909B /* tradeContractsViewController.xib in Resources */,
+				7355BA3B1BACDC58005DAD85 /* DBCamera.strings in Resources */,
 				F4E6B5811BAC140C00E916BA /* DealCheckFootView.xib in Resources */,
 				F4B6AC861BAABFDF008F1764 /* CheckInfoTableViewCell.xib in Resources */,
 				738FF6A31B9E825500F5318E /* LaunchScreen.xib in Resources */,
+				73EEE75C1BAC2C490026909B /* hotNewsTableViewCell.xib in Resources */,
+				73EEE7561BAC2C370026909B /* homeDealTableViewCell.xib in Resources */,
 				F4B6AC901BAAD299008F1764 /* CompanyInfoTableViewCell.xib in Resources */,
 				F4E6B5521BABB80E00E916BA /* PersonHeadTableViewCell.xib in Resources */,
 				F4E6B5721BAC015200E916BA /* DealInfoTableViewCell.xib in Resources */,
@@ -570,6 +583,8 @@
 				F4B6AC951BAAD72F008F1764 /* CompanyDetailTableViewCell.xib in Resources */,
 				730701B11BA9096000593FBC /* 导航条320x64.png in Resources */,
 				738FF6A01B9E825500F5318E /* Images.xcassets in Resources */,
+				7355BA3C1BACDC58005DAD85 /* DBCameraImages.xcassets in Resources */,
+				7355BA421BACF8EE005DAD85 /* ZYQAssetPicker.Bundle in Resources */,
 				F4E6B55C1BABBD2400E916BA /* PersonBasicViewController.xib in Resources */,
 				F4E6B5431BABB10A00E916BA /* CompanyChangeViewController.xib in Resources */,
 				F4E6B56A1BABE79400E916BA /* DealTableViewCell.xib in Resources */,
@@ -592,12 +607,15 @@
 			files = (
 				F4B6AC801BAABEB8008F1764 /* TitleTableViewCell.m in Sources */,
 				7307019E1BA9091300593FBC /* MBProgressHUD.m in Sources */,
+				7355BA371BACDC58005DAD85 /* DBCameraImageView.m in Sources */,
 				F4B6AC8A1BAAD195008F1764 /* CompanyViewController.m in Sources */,
 				738FF6981B9E825500F5318E /* AppDelegate.m in Sources */,
 				F4E6B5761BAC073B00E916BA /* DealDetailTableViewCell.m in Sources */,
 				F4B6AC941BAAD72F008F1764 /* CompanyDetailTableViewCell.m in Sources */,
 				F4E6B56D1BAC008400E916BA /* DealCheckViewController.m in Sources */,
 				F4E6B5641BABDE5E00E916BA /* DealMainViewController.m in Sources */,
+				7355BA391BACDC58005DAD85 /* DBCameraView.m in Sources */,
+				73EEE7551BAC2C370026909B /* homeDealTableViewCell.m in Sources */,
 				F4E6B5691BABE79400E916BA /* DealTableViewCell.m in Sources */,
 				F4E6B57B1BAC0F9100E916BA /* DealReportTableViewCell.m in Sources */,
 				F4B6AC8F1BAAD299008F1764 /* CompanyInfoTableViewCell.m in Sources */,
@@ -606,18 +624,27 @@
 				F4B6AC761BAAB15A008F1764 /* MyAccountViewController.m in Sources */,
 				738FF6951B9E825500F5318E /* main.m in Sources */,
 				F4E6B55B1BABBD2400E916BA /* PersonBasicViewController.m in Sources */,
+				7355BA3A1BACDC58005DAD85 /* DBCameraViewController.m in Sources */,
 				F4E6B5711BAC015200E916BA /* DealInfoTableViewCell.m in Sources */,
 				F4E6B57F1BAC13E500E916BA /* DealCheckFootView.m in Sources */,
+				7355BA4A1BACFA35005DAD85 /* ShowBigViewController.m in Sources */,
 				F4B6AC6D1BAAAED8008F1764 /* PersonViewController.m in Sources */,
 				F4B6AC7B1BAABA4E008F1764 /* BasicTableViewCell.m in Sources */,
 				F4E6B5511BABB80E00E916BA /* PersonHeadTableViewCell.m in Sources */,
 				F4E6B5561BABB91E00E916BA /* PersonNameTableViewCell.m in Sources */,
 				F4E6B5421BABB10A00E916BA /* CompanyChangeViewController.m in Sources */,
+				7355BA431BACF8EE005DAD85 /* ZYQAssetPickerController.m in Sources */,
+				7355BA3D1BACDC58005DAD85 /* UIImage+Crop.m in Sources */,
+				7355BA491BACFA35005DAD85 /* MessagePhotoMenuItem.m in Sources */,
 				F4B6AC691BAAAED8008F1764 /* DeatailTableViewCell.m in Sources */,
+				7355BA381BACDC58005DAD85 /* DBCameraManager.m in Sources */,
+				73EEE7791BAC39260026909B /* tradeContractsViewController.m in Sources */,
 				F4B6AC851BAABFDF008F1764 /* CheckInfoTableViewCell.m in Sources */,
 				F4E6B5601BABD03C00E916BA /* ChangePasswordViewController.m in Sources */,
 				F4E6B5301BAB99E600E916BA /* ResultViewController.m in Sources */,
+				73EEE75B1BAC2C490026909B /* hotNewsTableViewCell.m in Sources */,
 				730701C91BA9510200593FBC /* mainTabBarViewController.m in Sources */,
+				73EEE7611BAC2C7F0026909B /* ButtonsTableViewCell.m in Sources */,
 				F4E6B5471BABB14A00E916BA /* PersonInfoViewController.m in Sources */,
 				730413EF1BAA5D2700A6F45D /* HomeViewController.m in Sources */,
 			);
@@ -642,7 +669,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		738FF69C1B9E825500F5318E /* Main.storyboard */ = {
+		7355BA2F1BACDC58005DAD85 /* DBCamera.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7355BA301BACDC58005DAD85 /* en */,
+				7355BA311BACDC58005DAD85 /* es */,
+				7355BA321BACDC58005DAD85 /* it */,
+			);
+			name = DBCamera.strings;
+			sourceTree = "<group>";
+		};
+738FF69C1B9E825500F5318E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				738FF69D1B9E825500F5318E /* Base */,

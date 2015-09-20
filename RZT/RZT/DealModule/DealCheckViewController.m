@@ -51,6 +51,7 @@
 }
 
 #pragma mark----------------------delegate-----------------------------------
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.itemsArray.count + self.titleArry.count;
 }

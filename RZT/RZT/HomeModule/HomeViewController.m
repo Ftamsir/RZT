@@ -9,10 +9,42 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *homeTablev;
 
 @end
 
 @implementation HomeViewController
+-(void) createData{
+    _datasouce=[[NSMutableArray alloc]init];
+    NSMutableDictionary *s1=[[NSMutableDictionary alloc] initWithObjectsAndKeys:@"马来西亚国家银行和泰国签谅解备忘录",@"detail",@"news",@"image",nil];
+    NSMutableDictionary *s2=[[NSMutableDictionary alloc] initWithObjectsAndKeys:@"余维泽",@"detail",@"导航条320x64.png",@"image",nil];
+    _datasouce=[[NSMutableArray alloc]initWithObjects:s1,s2, nil];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+    [_datasouce addObject:s2];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden=false;
+}
+/*-(void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden=true;
+}*/
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +76,57 @@
     x.titlePositionAdjustment=UIOffsetMake(0, 0);
 
     // Do any additional setup after loading the view.
+}
+#pragma mark----------------------delegate-----------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 280;
+    }
+    else if (indexPath.row==1)
+    {
+        return 140;
+    }
+    return 44;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _datasouce.count+2;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc]init];
+    if (indexPath.row == 0) {
+        ButtonsTableViewCell *buttoncell = (ButtonsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ButtonsTableViewCell"];
+        if (buttoncell == nil) {
+            NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"ButtonsTableViewCell" owner:self options:nil];
+            buttoncell = [array objectAtIndex:0];
+        }
+        __weak typeof (self) weakself=self;
+        buttoncell.clickBlock = ^{
+            tradeContractsViewController *vc=[[tradeContractsViewController alloc]init];
+            //self.tabBarController.tabBar.hidden=true;
+            [weakself.navigationController pushViewController:vc animated:YES];
+        };
+        cell=buttoncell;
+    }
+    else if(indexPath.row==1){
+        homeDealTableViewCell *detailCell = (homeDealTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"homeDealTableViewCell"];
+        if (detailCell == nil) {
+             detailCell= [[[NSBundle mainBundle] loadNibNamed:@"homeDealTableViewCell" owner:self options:nil]lastObject];
+        }
+        cell = detailCell;
+    }
+    else
+    {
+        NSString *CellIdentifier =[NSString stringWithFormat:@"Cell%ld",indexPath.row];
+        hotNewsTableViewCell *newsCell = (hotNewsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (newsCell == nil) {
+            newsCell = [[[NSBundle mainBundle] loadNibNamed:@"hotNewsTableViewCell" owner:self options:nil] lastObject];
+            [newsCell setData:[[_datasouce objectAtIndex:indexPath.row-2]objectForKey:@"detail"]
+                    withImage:[[self.datasouce objectAtIndex:indexPath.row-2]objectForKey:@"image"]];
+        }
+        cell=newsCell;
+    }
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

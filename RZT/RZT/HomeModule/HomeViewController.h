@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HomeViewController : UIViewController
-
+#import "ButtonsTableViewCell.h"
+#import "homeDealTableViewCell.h"
+#import "hotNewsTableViewCell.h"
+#import "tradeContractsViewController.h"
+@interface HomeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic) NSMutableArray *datasouce;
+@property (nonatomic) NSMutableArray *sectionArray;
 @end

@@ -22,7 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.tabBarItem.titlePositionAdjustment=UIOffsetMake(-15, 0);
     // 字体颜色 选中
