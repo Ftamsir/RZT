@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+>>>>>>> Ftamsir/master
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -37,10 +43,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW8-Us-f0w">
                         <rect key="frame" x="0.0" y="54" width="320" height="95.5"/>
                         <subviews>
+<<<<<<< HEAD
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="无图片" translatesAutoresizingMaskIntoConstraints="NO" id="jKb-cT-dWg">
                                 <rect key="frame" x="20" y="13" width="80" height="70"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="无图片" translatesAutoresizingMaskIntoConstraints="NO" id="Bbe-xg-Gvc">
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="无图片" translatesAutoresizingMaskIntoConstraints="NO" id="jKb-cT-dWg">
+                                <rect key="frame" x="20" y="13" width="80" height="70"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="无图片" translatesAutoresizingMaskIntoConstraints="NO" id="Bbe-xg-Gvc">
+>>>>>>> Ftamsir/master
                                 <rect key="frame" x="220" y="13" width="80" height="70"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSP-4D-kbR">
@@ -57,7 +70,11 @@
                                     <constraint firstAttribute="height" constant="1" id="4gx-Yp-9K1"/>
                                 </constraints>
                             </view>
+<<<<<<< HEAD
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="无图片" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-W7-Mjf">
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="无图片" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-W7-Mjf">
+>>>>>>> Ftamsir/master
                                 <rect key="frame" x="120" y="13" width="80" height="70"/>
                             </imageView>
                         </subviews>

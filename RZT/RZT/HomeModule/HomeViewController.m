@@ -45,29 +45,38 @@
     self.tabBarController.tabBar.hidden=true;
 }*/
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createData];
-    self.homeTablev.delegate=self;
-    self.homeTablev.dataSource=self;
-    self.homeTablev.separatorStyle = UITableViewCellSelectionStyleNone;
-    self.homeTablev.sectionIndexColor=[UIColor whiteColor];
-    //设置navigation title和返回
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = item;
-    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    //[self.navigationController.navigationBar setBackgroundColor:[UIColor redColor]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条375x64"] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar  setTitleTextAttributes:
-                                    @{NSForegroundColorAttributeName:[UIColor whiteColor],
-                                                    NSFontAttributeName:[UIFont boldSystemFontOfSize:18]}];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    title.text = @"睿证通";
+    title.font = [UIFont fontWithName:@"Heiti SC" size:20.0f];
+    title.textColor = [UIColor whiteColor];
+    title.textAlignment = NSTextAlignmentCenter;
+    [titleView addSubview:title];
+    [self.navigationItem setTitleView:titleView];
+
+    
+    //self.tabBarController.tabBar.selectedImageTintColor= [UIColor orangeColor];
     //设置高亮图标
     UITabBarItem *x=[self.tabBarController.tabBar.items objectAtIndex:0];
     [x setSelectedImage:[[UIImage imageNamed:@"homeL"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    UIEdgeInsets insets = {3, 3, 3, 3};
+    x.imageInsets=insets;
+    x.titlePositionAdjustment=UIOffsetMake(0, 0);
 
     // Do any additional setup after loading the view.
 }
-
 #pragma mark----------------------delegate-----------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
@@ -119,7 +128,6 @@
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
